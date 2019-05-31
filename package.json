@@ -13,6 +13,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "time-stamp": "^2.2.0",
+    "timestamp": "0.0.1",
     "typeface-roboto": "0.0.54"
   },
   "scripts": {

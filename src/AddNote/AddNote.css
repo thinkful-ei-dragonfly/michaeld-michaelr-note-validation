@@ -1,4 +1,44 @@
 .AddNote {
   color: #bdbdbd;
+  max-width: 300px;
   
+}
+
+.AddNote input{
+  background-color: #010d1e;
+  outline: none;
+  box-shadow: none;
+  padding: 10px;
+  font-family: 'Roboto';
+  font-size: 1em;
+	color: #676767;
+}
+
+.AddNote textarea {
+  margin-bottom: 8px;
+  background-color: #010d1e;
+  color: #cacaca;
+  width: 300px;	
+	outline: none;
+	padding: 10px;
+	font-family: 'Roboto';
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	box-sizing:border-box;
+}
+
+.AddNote button {
+  margin-left: 50px;
+  background-color: #cacaca;
+  border-radius: 30px;
+  border: 0;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  height: 60px;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  width: 60px;
 }

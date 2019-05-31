@@ -6,6 +6,7 @@ import NotePageNav from '../NotePageNav/NotePageNav';
 import NoteListMain from '../NoteListMain/NoteListMain';
 import NotePageMain from '../NotePageMain/NotePageMain';
 import AddFolder from '../AddFolder/AddFolder';
+import AddNote from '../AddNote/AddNote';
 import API from '../api';
 import cuid from 'cuid';
 import {getNotesForFolder, findNote, findFolder} from '../notes-helpers';
@@ -41,6 +42,19 @@ class App extends Component {
     API.addFolder(folder);
     this.setState({
       folders: [...this.state.folders, folder]
+    });
+  };
+
+  addNote = noteName => {
+    const note = {
+      id: cuid(),
+      name: noteName
+    }
+
+    console.log(noteName);
+    API.addNote(note);
+    this.setState({
+      notes: [...this.state.notes, note]
     });
   };
 
@@ -108,7 +122,16 @@ class App extends Component {
             render={() => {
                 return <AddFolder addFolder={this.addFolder}/>
             }
-        } />
+        }
+        />
+        <Route
+            path="/add-note"
+            render={() => {
+                return <AddNote addNote={this.addNote} folders={this.state.folders}/>
+            }
+        }
+        />
+
       </>
     );
   }

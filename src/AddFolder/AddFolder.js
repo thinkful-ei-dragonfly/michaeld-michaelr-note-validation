@@ -5,19 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class AddFolder extends React.Component {
 
   state = {
-    folderName: '',
     error: null
     }
 
-    handleSubmit(e) {
+    handleSubmit = (e) => {
       e.preventDefault();
       const addedFolder = e.target['folder-name'].value;
       console.log(addedFolder);
       this.props.addFolder(addedFolder);
     }
     
-
   render() {
+    console.log(this.props)
     return (
       <form className="AddFolder" onSubmit={this.handleSubmit}>
         <label htmlFor="folder-name">Folder Name:</label>

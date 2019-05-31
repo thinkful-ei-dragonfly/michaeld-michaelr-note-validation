@@ -1,3 +1,32 @@
 .AddFolder {
   color: #cacaca;
 }
+
+input{
+  margin: 10px;
+}
+
+label {
+ margin-left: 20px;
+}
+
+.AddFolder button {
+  background-color: #cacaca;
+  border-radius: 30px;
+  border: 0;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  height: 60px;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  width: 60px;
+}
+
+.AddFolder button:hover {
+  background-color: #29862e;
+  color: white;
+}
+
+

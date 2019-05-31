@@ -11,12 +11,15 @@ class AddFolder extends React.Component {
 
     handleSubmit(e) {
       e.preventDefault();
+      const addedFolder = e.target['folder-name'].value;
+      console.log(addedFolder);
+
     }
     
 
   render() {
     return (
-      <form className="AddFolder">
+      <form className="AddFolder" onSubmit={this.handleSubmit}>
         <label htmlFor="folder-name">Folder Name:</label>
         <input type="text" name="folder-name" id="folder-name"/>
         <button type="submit">

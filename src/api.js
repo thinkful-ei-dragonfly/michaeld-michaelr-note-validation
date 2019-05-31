@@ -13,6 +13,19 @@ const API = {
         'content-type': 'application/json'
       }
     })
+  },
+
+  addFolder : (folder) => {
+
+    fetch(`${BASE_URL}/folders/`, {
+      method: 'POST',
+      body: JSON.stringify(folder),
+      headers: {
+        'content-type': 'application/json'
+
+      }
+    })
+
   }
 }
 

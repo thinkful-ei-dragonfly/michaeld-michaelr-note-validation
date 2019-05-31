@@ -11,8 +11,8 @@ class AddFolder extends React.Component {
     handleSubmit = (e) => {
       e.preventDefault();
       const addedFolder = e.target['folder-name'].value;
-      console.log(addedFolder);
       this.props.addFolder(addedFolder);
+      e.target['folder-name'].value = '';
     }
     
   render() {

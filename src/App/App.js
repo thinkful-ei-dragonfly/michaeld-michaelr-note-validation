@@ -37,21 +37,20 @@ class App extends Component {
       id: cuid(),
       name: folderName
     };
-
-    console.log(folderName);
     API.addFolder(folder);
     this.setState({
       folders: [...this.state.folders, folder]
     });
   };
 
-  addNote = noteName => {
+  addNote = data => {
     const note = {
       id: cuid(),
-      name: noteName
+      name: data.name,
+      modified: data.date,
+      folderId: data.folderId,
+      content: data.content
     }
-
-    console.log(noteName);
     API.addNote(note);
     this.setState({
       notes: [...this.state.notes, note]

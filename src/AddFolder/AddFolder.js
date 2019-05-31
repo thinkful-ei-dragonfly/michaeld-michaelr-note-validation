@@ -13,7 +13,7 @@ class AddFolder extends React.Component {
       e.preventDefault();
       const addedFolder = e.target['folder-name'].value;
       console.log(addedFolder);
-
+      this.props.addFolder(addedFolder);
     }
     
 

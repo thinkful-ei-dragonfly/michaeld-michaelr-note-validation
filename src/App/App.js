@@ -103,7 +103,12 @@ class App extends Component {
             return <NotePageMain {...routeProps} note={note} />;
           }}
         />
-        <Route path="/add-folder" component={AddFolder} />
+        <Route
+            path="/add-folder"
+            render={() => {
+                return <AddFolder addFolder={this.addFolder}/>
+            }
+        } />
       </>
     );
   }
